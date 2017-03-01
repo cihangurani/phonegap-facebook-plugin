@@ -32,9 +32,7 @@
         <clobbers target="facebookConnectPlugin" />
     </js-module>
 
-         <js-module src="FacebookAds.js" name="FacebookAds">
-        <clobbers target="window.FacebookAds" />
-    </js-module>
+        
         
     <!-- android -->
     <platform name="android">
@@ -65,23 +63,7 @@
 
         <!-- cordova plugin src files -->
         <source-file src="platforms/android/src/org/apache/cordova/facebook/ConnectPlugin.java" target-dir="src/org/apache/cordova/facebook" />
-<config-file target="res/xml/config.xml" parent="/*">
-            <feature name="FacebookAds">
-                <param name="android-package" value="com.rjfun.cordova.facebookads.FacebookAdPlugin"/>
-            </feature>
-        </config-file>
-        <source-file src="platforms/android/src/org/apache/cordova/facebook/FacebookAdPlugin.java" target-dir="src/com/rjfun/cordova/facebookads" />
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:name="com.facebook.ads.InterstitialAdActivity" 
-			android:configChanges="keyboardHidden|orientation|screenSize" />
-          </config-file>
-        <config-file target="AndroidManifest.xml" parent="/*">
-			  <uses-permission android:name="android.permission.INTERNET" />
-			  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        </config-file>
-          
-        <framework src="com.android.support:support-v4:+" custom="true" />
             
     </platform>
 
@@ -131,23 +113,7 @@
         <framework src="Accounts.framework" weak="true" />
         <framework src="Security.framework" weak="true" />
             
-            <config-file target="config.xml" parent="/*">
-             <feature name="FacebookAds">
-                 <param name="ios-package" value="FacebookAdPlugin" />
-             </feature>
-         </config-file>
-         <header-file src="platforms/ios/HelloCordova/Plugins/com.phonegap.plugins.facebookconnect/FacebookAdPlugin.h" />
-         <source-file src="platforms/ios/HelloCordova/Plugins/com.phonegap.plugins.facebookconnect/FacebookAdPlugin.m" />
-         <header-file src="platforms/ios/HelloCordova/Plugins/com.phonegap.plugins.facebookconnect/UITapGestureRecognizer+Spec.h" />
-         <source-file src="platforms/ios/HelloCordova/Plugins/com.phonegap.plugins.facebookconnect/UITapGestureRecognizer+Spec.m" />
-         
-        <framework src="AdSupport.framework"/>
-        <framework src="StoreKit.framework"/>
-        <framework src="CoreMotion.framework"/>
-        <framework src="CoreImage.framework"/>
-        <framework src="QuartzCore.framework"/>
-        <framework src="OpenGLES.framework"/>
-        <framework src="Security.framework"/>
+       
 
     </platform>
 
